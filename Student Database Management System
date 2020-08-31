@@ -7,6 +7,9 @@ using namespace std;
 
 class Student
 {
+
+             // declaring all the variables acc to their data types//
+	     
     int admno;
     char name[20];
     char gender;
@@ -14,14 +17,18 @@ class Student
     float marks;
     float percentage;
  
+                    
     public:
     void getData();
     void showData();
     int getAdmno(){return admno;}
 }s;
 
+
+// please enter correct data according to their data types //
+
 void Student::getData()
-{
+{       
     cout<<"\n\nEnter Student Details......\n";
     cout<<"Enter Admission No.     : "; cin>>admno;
     cout<<"Enter Full Name         : "; cin>>name;// 
@@ -33,6 +40,7 @@ void Student::getData()
 }
 
 
+// display the information given by user //
 
 void Student::showData()
 {
@@ -47,6 +55,7 @@ void Student::showData()
 }
 
 
+// add data  and save it to file //
 
 void addData()
 {
@@ -59,6 +68,7 @@ void addData()
 }
 
 
+// display the data  of the student //
 
 void displayData()
 {
@@ -73,7 +83,7 @@ void displayData()
 }
 
 
-
+// search the data of the student and check the conditions for it  //
 void searchData()
 {
       int n, flag=0;
@@ -98,8 +108,8 @@ void searchData()
 }
 
 
-
-void deleteData()
+ //  delete data of the student  and put into the trash file //
+void deleteData() 
 {
       int n, flag=0;
       ifstream fin;
@@ -139,7 +149,8 @@ void deleteData()
 }
 
 
-
+ // deleted data is stored in trash file //
+ 
 void getTrash()
 {
         ifstream fin;
@@ -155,6 +166,7 @@ void getTrash()
 }
 
 
+// modify the details of the student//
 
 void modifyData()
 {
@@ -188,6 +200,8 @@ void modifyData()
 
 
 
+// contain all the display and enter the choice what the user wnat to do //
+
 void project()
 {
        int ch;
@@ -209,30 +223,30 @@ void project()
 		    system("cls");
            
 		     switch(ch)
-             {
-                    case 1:
+                     {
+                                        case 1:
 					       addData();
-						    break;
+					       break;
                        
 					case 2:
 					       displayData(); 
-						    break;
+				       	       break;
                     
 					case 3: 
 					       searchData();
-						    break;
+					      break;
                     
 					case 4: 
 					        deleteData();  
-                            break;
+                                                break;
                     
 					case 5:
 					        getTrash();
-							 break;
+					       break;
                   
-				    case 6:
+				        case 6:   
 					        modifyData();
-						    break;
+					       break;
   
              }
              system("pause");
@@ -240,8 +254,9 @@ void project()
 }
 
 
+// main function//
 
 int main()
 {
-      project();
+      project();    // goes to the project  fonction//
 }
